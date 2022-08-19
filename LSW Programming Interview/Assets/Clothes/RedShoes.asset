@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 11
   itemName: Red Shoes
   value: 800
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 5cbfa316d7bda8243978dfbd8edb5e75, type: 3}

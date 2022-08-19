@@ -98,9 +98,9 @@ public class Shop : MonoBehaviour
             sell = false;
             Buy.SetActive(true);
             Sell.SetActive(false);
-            BuyTitle.gameObject.GetComponent<Image>().color = new Color(144f, 144f, 144f, 255f);
-            SellTitle.gameObject.GetComponent<Image>().color = new Color(202f, 202f, 202f, 255f);
-           
+            BuyTitle.gameObject.GetComponent<CanvasGroup>().alpha = 1f;
+            SellTitle.gameObject.GetComponent<CanvasGroup>().alpha = 0.75f;
+
         }
         if(sell)
         {
@@ -108,8 +108,8 @@ public class Shop : MonoBehaviour
             Buy.SetActive(false); 
             Sell.SetActive(true);
             SellItems.SetActive(true);
-            BuyTitle.gameObject.GetComponent<Image>().color = new Color(202f, 202f, 202f, 255f);
-            SellTitle.gameObject.GetComponent<Image>().color = new Color(144f, 144f, 144f, 255f);
+            BuyTitle.gameObject.GetComponent<CanvasGroup>().alpha = 0.75f;
+            SellTitle.gameObject.GetComponent<CanvasGroup>().alpha = 1f;
         }
 
        

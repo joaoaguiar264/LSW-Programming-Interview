@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 5
   itemName: Black Pants
   value: 350
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 4312abd82d85ce54889e367df48fc72b, type: 3}

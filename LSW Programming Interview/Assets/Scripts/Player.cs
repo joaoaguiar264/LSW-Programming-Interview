@@ -11,9 +11,8 @@ public class Player : MonoBehaviour
 
     public bool buyRange;
 
+    public static bool dialogOn;
 
-
-    // Clothes : 0 = none / 1 = have one / 2 = equipped
     public static bool redShirt;
     public static bool yellowShirt;
     public static bool blackShirt;
@@ -29,6 +28,8 @@ public class Player : MonoBehaviour
     public GameObject shirt;
     public GameObject pants;
     public GameObject shoes;
+
+    public GameObject welcomeDialog;
 
     // Start is called before the first frame update
     void Start()
@@ -126,6 +127,11 @@ public class Player : MonoBehaviour
         {
             buyRange = true;
         }
+
+        if (collision.gameObject.tag == "dialog")
+        {
+            welcomeDialog.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -133,6 +139,11 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "BuyArea")
         {
             buyRange = false;
+        }
+
+        if (collision.gameObject.tag == "dialog")
+        {
+            welcomeDialog.SetActive(false);
         }
     }
 

@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 8
   itemName: Yellow Pants
   value: 350
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 8a68ca544d329544380e1fc1094f4af4, type: 3}
