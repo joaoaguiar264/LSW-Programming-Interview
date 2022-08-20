@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
 
     public static bool dialogOn;
 
+    public static bool defaultShirt = true;
+    public static bool defaultPants = true;
+    public static bool defaultShoes = true;
+
     public static bool redShirt;
     public static bool yellowShirt;
     public static bool blackShirt;
@@ -42,23 +46,42 @@ public class Player : MonoBehaviour
     {
         // WEAR CLOTHES
 
+        //Defaults
+        if (defaultShirt)
+        {
+            shirt.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+            defaultShirt = false;
+        }
+
+        if (defaultPants)
+        {
+            pants.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+            defaultPants = false;
+        }
+
+        if (defaultShoes)
+        {
+            shoes.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+            defaultShoes = false;
+        }
+
         //Shirts
         if (blackShirt)
         {
             shirt.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 255f);
-            blackShirt = false;
+            
         }
 
         if (redShirt)
         {
             shirt.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 255f);
-            redShirt = false;
+            
         }
 
         if (yellowShirt)
         {
             shirt.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 0f, 255f);
-            yellowShirt = false;
+            
         }
 
         //Pants
@@ -66,19 +89,16 @@ public class Player : MonoBehaviour
         if (blackPants)
         {
             pants.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 255f);
-            blackPants = false;
         }
 
         if (redPants)
         {
             pants.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 255f);
-            redPants = false;
         }
 
         if (yellowPants)
         {
             pants.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 0f, 255f);
-            yellowPants = false;
         }
 
         //Shoes
@@ -86,19 +106,16 @@ public class Player : MonoBehaviour
         if (blackShoes)
         {
             shoes.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 255f);
-            blackShoes = false;
         }
 
         if (redShoes)
         {
             shoes.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 255f);
-            redShoes = false;
         }
 
         if (yellowShoes)
         {
             shoes.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 0f, 255f);
-            yellowShoes = false;
         }
 
 
